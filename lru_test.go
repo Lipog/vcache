@@ -10,7 +10,7 @@ func (d String) Len() int {
 	return len(d)
 }
 
-func TestGet(t *testing.T) {
+func TestLRUGet(t *testing.T) {
 	lru := lru2.New(int64(0),nil)
 	lru.Add("key1", String("123436"))
 	if v, ok := lru.Get("key1"); !ok || string(v.(String)) != "123436" {

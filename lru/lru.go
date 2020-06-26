@@ -1,5 +1,6 @@
 package lru
 //这里存放的是缓存淘汰策略
+//最底层的缓存，进行增删改查等操作
 
 import (
 	"container/list"

@@ -1,10 +1,12 @@
 package Vcache
 //这里是并发控制，通过互斥锁来实现
+//这是中间层的缓存，通过锁来保证底层的缓存的增删改查的并发安全
 
 import (
 	"Vcache/lru"
 	"sync"
 )
+
 
 type cache struct {
 	mu sync.Mutex
@@ -25,16 +27,17 @@ func (c *cache) add(key string, value ByteView) {
 	c.lru.Add(key, value)
 }
 
-func (c *cache) get(key string) (value ByteView, ok bool) {
+func (c *cache) get(key string) (ByteView, bool) {
 	c.mu.Lock()
 	defer c.mu.Unlock()
+	//如果底层缓存为空，那么就直接返回nil
 	if c.lru == nil {
-		return
+		return ByteView{}, false
 	}
 	//如果存在，就返回对应的值
 	if v, ok := c.lru.Get(key); ok {
 		return v.(ByteView), ok
 	}
 	//不存在则返回空和false
-	return
+	return ByteView{}, false
 }
