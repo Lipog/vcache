@@ -1,4 +1,4 @@
-package Vcache
+package vcache
 
 import (
 	"fmt"
@@ -17,7 +17,7 @@ func TestGetter(t *testing.T) {
 	})
 	except := []byte("key")
 	//回调函数是将字符串转换为切片
-	if v, _ := f.Get("key"); !reflect.DeepEqual(v, except) {
+	if v, _ := Get("key"); !reflect.DeepEqual(v, except) {
 		t.Errorf("callback failed")
 	}
 }

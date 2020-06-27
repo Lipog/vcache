@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03f3f828-1787-4382-8cab-d1f6b3c3e229" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vcache/http.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/cache.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lru/lru.go" beforeDir="false" afterPath="$PROJECT_DIR$/lru/lru.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lru_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/lru_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vcache.go" beforeDir="false" afterPath="$PROJECT_DIR$/vcache.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vcache_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vcache_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/byteview.go" beforeDir="false" afterPath="$PROJECT_DIR$/vcache/byteview.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/vcache/cache.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lru_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vcache/lru_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vcache.go" beforeDir="false" afterPath="$PROJECT_DIR$/vcache/vcache.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vcache_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vcache/vcache_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +42,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lip\Desktop\数据结构200题\demo\Vcache\vcache" />
       <recent name="C:\Users\Lip\Desktop\数据结构200题\demo\Vcache\lru" />
     </key>
   </component>
@@ -56,13 +58,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestGet in Vcache">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+  <component name="RunManager" selected="Go Build.go build Vcache">
+    <configuration name="go build Vcache" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Vcache" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="Vcache" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -88,18 +90,9 @@
       <pattern value="^TestGetter$" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="Vcache" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build Vcache" />
         <item itemvalue="Go Test.TestGet in Vcache" />
         <item itemvalue="Go Test.TestGetter in Vcache" />
       </list>
@@ -113,7 +106,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

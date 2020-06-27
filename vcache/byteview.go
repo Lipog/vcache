@@ -1,4 +1,4 @@
-package Vcache
+package vcache
 //这里是缓存值的抽象于封装
 
 //ByteView用来表示只读的数据结构，表示缓存

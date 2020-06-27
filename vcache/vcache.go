@@ -1,4 +1,4 @@
-package Vcache
+package vcache
 //这里是顶层的缓存，统筹回调等
 
 import (
@@ -15,8 +15,8 @@ import (
 // 比如可以创建三个 Group，缓存学生的成绩命名为 scores，
 // 缓存学生信息的命名为 info，缓存学生课程的命名为 courses
 type Group struct {
-	name string
-	getter Getter  //即缓存未命中时获取源数据的回调(callback)
+	name      string
+	getter    Getter //即缓存未命中时获取源数据的回调(callback)
 	mainCache cache  //即一开始实现的并发缓存,cache中含有锁，可以保证并发的安全
 }
 
@@ -49,7 +49,7 @@ func NewGroup(name string, cacheBytes int64, getter Getter) *Group {
 	g := &Group{
 		name:      name,
 		getter:    getter,
-		mainCache: cache{cacheBytes:cacheBytes},
+		mainCache: cache{cacheBytes: cacheBytes},
 	}
 	//将name和建立的group建立映射关系
 	groups[name] = g

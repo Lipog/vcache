@@ -1,4 +1,4 @@
-package Vcache
+package vcache
 
 import (
 	lru2 "Vcache/lru"
